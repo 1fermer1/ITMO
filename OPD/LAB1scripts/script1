@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+mkdir lab0
+cd lab0
+mkdir -p cofagrigus3/beedrill cofagrigus3/swampert cofagrigus3/seaking
+touch cofagrigus3/steelix cofagrigus3/emboar cofagrigus3/bagon
+mkdir -p oddish3/gigalith oddish3/archen oddish3/skiploom petilil3/herdier petilil3/nidoking petilil3/skorupi petilil3/onix petilil3/crawdaunt petilil3/horsea
+touch lumineon7 oddish3/dragonair venusaur3 yanmega1
+echo Живет Cave Desert Mountain > cofagrigus3/steelix
+echo weigth=330.7 height=63.0 > cofagrigus3/emboar
+echo atk=12 def=7 >> cofagrigus3/emboar
+echo satk=4 sdef=3 spd=5 > cofagrigus3/bagon
+echo satk=7 sdef=9 > lumineon7
+echo spd=9 >> lumineon7
+echo Развитые способности Marvel Scale > oddish3/dragonair
+echo Тип > venusaur3
+echo диеты Omnivore Phototroph >> venusaur3
+echo weigth=113.5 height=75.0 atk=8 > yanmega1
+echo def=9 >> yanmega1
+cd ..

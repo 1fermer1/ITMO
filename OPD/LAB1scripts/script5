@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+cd lab0
+rm yanmega1
+rm oddish3/dragonair
+rm cofagrigus3/steelixvenusa*
+rm oddish3/dragonairlumine*
+rm -R cofagrigus3
+rm -R oddish3/archen
+cd ..

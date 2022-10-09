@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+cp -R lab0/cofagrigus3 cofagrigus3
+mv cofagrigus3 lab0/cofagrigus3/beedrill
+cd lab0
+cp venusaur3 petilil3/onix
+ln -s cofagrigus3 Copy_27
+cp yanmega1 oddish3/dragonairyanmega
+cat cofagrigus3/bagon oddish3/dragonair > lumineon7_65
+ln -s /home/studs/s373331/lab0/venusaur3 cofagrigus3/steelixvenusaur
+ln -P /home/studs/s373331/lab0/lumineon7 oddish3/dragonairlumineon
+cd ..

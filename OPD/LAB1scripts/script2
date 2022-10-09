@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+cd lab0
+chmod 004 cofagrigus3/steelix
+chmod ugo-r cofagrigus3/beedrill
+chmod o=w cofagrigus3/beedrill
+chmod 512 cofagrigus3/swampert
+chmod 513 cofagrigus3/seaking
+chmod 440 cofagrigus3/emboar
+chmod 440 cofagrigus3/bagon
+chmod 004 lumineon7
+chmod 375 cofagrigus3
+chmod 006 oddish3/dragonair
+chmod 361 oddish3/gigalith
+chmod 512 oddish3/archen
+chmod 753 oddish3/skiploom
+chmod 737 oddish3
+chmod 700 petilil3/herdier
+chmod 733 petilil3/nidoking
+chmod 337 petilil3/skorupi
+chmod 513 petilil3/onix
+chmod 537 petilil3/crawdaunt
+chmod 737 petilil3/horsea
+chmod 500 petilil3
+chmod 444 venusaur3
+chmod 400 yanmega1
+cd ..

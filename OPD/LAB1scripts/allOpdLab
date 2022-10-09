@@ -1,0 +1,83 @@
+mkdir lab0
+cd lab0
+mkdir -p cofagrigus3/beedrill cofagrigus3/swampert cofagrigus3/seaking
+touch cofagrigus3/steelix cofagrigus3/emboar cofagrigus3/bagon
+mkdir -p oddish3/gigalith oddish3/archen oddish3/skiploom petilil3/herdier petilil3/nidoking petilil3/skorupi petilil3/onix petilil3/crawdaunt petilil3/horsea
+touch lumineon7 oddish3/dragonair venusaur3 yanmega1
+echo Живет Cave Desert Mountain > cofagrigus3/steelix
+echo weigth=330.7 height=63.0 > cofagrigus3/emboar
+echo atk=12 def=7 >> cofagrigus3/emboar
+echo satk=4 sdef=3 spd=5 > cofagrigus3/bagon
+echo satk=7 sdef=9 > lumineon7
+echo spd=9 >> lumineon7
+echo Развитые способности Marvel Scale > oddish3/dragonair
+echo Тип > venusaur3
+echo диеты Omnivore Phototroph >> venusaur3
+echo weigth=113.5 height=75.0 atk=8 > yanmega1
+echo def=9 >> yanmega1
+cd ..
+
+cp -R lab0/cofagrigus3 cofagrigus3
+mv cofagrigus3 lab0/cofagrigus3/beedrill
+cd lab0
+cp venusaur3 petilil3/onix
+ln -s cofagrigus3 Copy_27
+cp yanmega1 oddish3/dragonairyanmega
+cat cofagrigus3/bagon oddish3/dragonair > lumineon7_65
+ln -s /home/studs/s373331/lab0/venusaur3 cofagrigus3/steelixvenusaur
+ln -P /home/studs/s373331/lab0/lumineon7 oddish3/dragonairlumineon
+cd ..
+
+cd lab0
+chmod 004 cofagrigus3/steelix
+chmod ugo-r cofagrigus3/beedrill
+chmod o=w cofagrigus3/beedrill
+chmod 512 cofagrigus3/swampert
+chmod 513 cofagrigus3/seaking
+chmod 440 cofagrigus3/emboar
+chmod 440 cofagrigus3/bagon
+chmod 004 lumineon7
+chmod 375 cofagrigus3
+chmod 006 oddish3/dragonair
+chmod 361 oddish3/gigalith
+chmod 512 oddish3/archen
+chmod 753 oddish3/skiploom
+chmod 737 oddish3
+chmod 700 petilil3/herdier
+chmod 733 petilil3/nidoking
+chmod 337 petilil3/skorupi
+chmod 513 petilil3/onix
+chmod 537 petilil3/crawdaunt
+chmod 737 petilil3/horsea
+chmod 500 petilil3
+chmod 444 venusaur3
+chmod 400 yanmega1
+cd ..
+
+echo -e "Подсчитать количество строк содержимого файла yanmega1, результат дописать в тот-же\nфайл, подавить вывод ошибок доступа\n"
+wc -l lab0/yanmega1 >> lab0/yanmega1 2>/dev/null
+cd lab0
+echo -e "\n\n\nВывести рекурсивно список имен файлов в директории oddish3, список отсортироватьn\nпо имени z->a, ошибки доступа не подавлять и не перенаправлять\n"
+ls -Ra oddish3 2>&2 | sort -r
+echo -e "\n\n\nВывести содержимое файла venusaur3 с номерами строк, исключить строки, заканчивающиеся\nна 'h', регистр символов игнорировать, добавить вывод ошибок доступа в стандартный поток вывода\n"
+sed '/h$/d' venusaur3 2>&1 | nl
+echo -e "\n\n\nВывести три последних элемента рекурсивного списка имен и атрибутов файлов в директории\nlab0, заканчивающихся на символ 'r', список отсортировать по имени a->z, ошибки доступа не подавлять\nи не перенаправлять\n"
+cd ..
+ls -Rla lab0 2>&2 | grep "r$" | tail -3
+echo -e "\n\n\nВывести список имен и атрибутов файлов в директории petilil3, список отсортировать по\nимени z->a, подавить вывод ошибок доступа\n"
+cd lab0
+ls -Rl petilil3 2>/dev/null | sort -r | grep "^[- | d | l]"
+echo -e "\n\n\nПодсчитать количество строк содержимого файлов: steelix, emboar, bagon, отсортировать\nвывод по увеличению количества, добавить вывод ошибок доступа в стандартный поток вывода\n"
+cd cofagrigus3
+wc -l steelix emboar bagon 2>&1 | sort | grep -v ".*total"
+cd ..
+cd ..
+
+cd lab0
+rm yanmega1
+rm oddish3/dragonair
+rm cofagrigus3/steelixvenusa*
+rm oddish3/dragonairlumine*
+rm -R cofagrigus3
+rm -R oddish3/archen
+cd ..
