@@ -1,0 +1,4 @@
+Main-Class: Laba2Pokemon
+Class-Path: Lib/Pokemon.jar
+
+
